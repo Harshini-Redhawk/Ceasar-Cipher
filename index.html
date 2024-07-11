@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Encryptor and Decryptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Caesar Cipher Encryptor and Decryptor</h1>
+        <div class="input-group">
+            <label for="shift">Shift Value:</label>
+            <input type="number" id="shift" value="3">
+        </div>
+        <div class="input-group">
+            <label for="modulo">Character Set Size (Modulo Value):</label>
+            <input type="number" id="modulo" value="62"> <!-- Default modulo is 62 (26 letters + 26 uppercase letters + 10 digits) -->
+        </div>
+        <div class="input-group">
+            <label for="caseOption">Letter Case:</label>
+            <select id="caseOption">
+                <option value="maintain">Maintain Case</option>
+                <option value="uppercase">Uppercase</option>
+                <option value="lowercase">Lowercase</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="foreignOption">Foreign Characters:</label>
+            <select id="foreignOption">
+                <option value="ignore">Ignore</option>
+                <option value="remove">Remove</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="plainText">Plain Text:</label>
+            <textarea id="plainText" rows="4"></textarea>
+        </div>
+        <div class="input-group">
+            <button onclick="encrypt()">Encrypt</button>
+            <button onclick="decrypt()">Decrypt</button>
+        </div>
+        <div class="input-group">
+            <label for="cipherText">Cipher Text:</label>
+            <textarea id="cipherText" rows="4"></textarea>
+        </div>
+        <div class="input-group">
+            <button onclick="location.href='bruteforce.html'">Bruteforce</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
